@@ -1,12 +1,15 @@
 import "./App.css";
 
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import AddTodo from "./components/AddTodo";
 import ListTodo from "./components/ListTodo";
 
 function App() {
+  useEffect(() => {
+    document.title = "Your Custom Title";
+  }, []);
   const todos = useSelector((state) => {
-    console.log(state);
     return state.todos;
   });
   return (

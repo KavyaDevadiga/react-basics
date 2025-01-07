@@ -9,6 +9,7 @@ const ListTodo = ({ todo }) => {
       <input
         readOnly={true}
         value={todo.text}
+        disabled={true}
         className="px-3 py-2 border border-gray-300"
         type="text"
       />
